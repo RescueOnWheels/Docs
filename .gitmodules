@@ -4,3 +4,6 @@
 [submodule "Rover-Definition-of-Done"]
 	path = Rover-Definition-of-Done
 	url = git@github.com:RescueOnWheels/Rover-Definition-of-Done.git
+[submodule "Rover-Class-Diagrams"]
+	path = Rover-Class-Diagrams
+	url = git@github.com:RescueOnWheels/Rover-Class-Diagrams.git
