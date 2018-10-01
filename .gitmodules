@@ -1,6 +1,3 @@
-[submodule "Sprint1-Presentation"]	
-	path = Sprint1-Presentation
-	url = git@github.com:RescueOnWheels/Sprint1-Presentation.git
 [submodule "Rover-Documentation-Template"]
 	path = Rover-Documentation-Template
 	url = git@github.com:RescueOnWheels/Rover-Documentation-Template.git
@@ -11,3 +8,6 @@
 	path = Rover-Class-Diagrams
 	url = git@github.com:RescueOnWheels/Rover-Class-Diagrams.git
 
+[submodule "Sprint1pres"]
+	path = Sprint1-Presentation
+	url = git@github.com:RescueOnWheels/Sprint1-Presentation.git
