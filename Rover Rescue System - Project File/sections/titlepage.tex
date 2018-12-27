@@ -1,0 +1,50 @@
+\title{Project File}
+\author{ROW 5}
+\date{\today}
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+
+	\begin{titlepage}
+		\centering
+		\vspace*{0.5 cm}
+		\includegraphics[scale=1]{HvA.jpg}\\[1.0 cm]
+		\textsc{\Large Rover Rescue System}\\[0.5 cm]
+		\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+		{ \huge \bfseries \thetitle}\\
+		\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{Author:}\\
+				Christiaan van Arum\\
+				Rapha\"el Bunck\\
+				Nino van Galen\\
+				Martijn Vegter
+			\end{flushleft}
+		\end{minipage}~
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{Student Number:} \\
+				500778983\\ % Chris 
+				500774349\\ % Raphaël
+				500790589\\ % Nino
+				500775388	% Martijn
+			\end{flushright}
+		\end{minipage}\\[2 cm]
+		
+		{\large \thedate}\\[2 cm]
+		
+		\vfill
+		
+	\end{titlepage}
