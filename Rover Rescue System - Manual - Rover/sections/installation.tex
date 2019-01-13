@@ -1,2 +1,84 @@
-\section{Installation}
-TODO
+\section{Installation Guide}
+This chapter gives a step by step tutorial to get the RSS up and running. After completing the installation, continue reading the usage guide.
+
+\subsection{Pre-installation}
+Before installing the Rover software, make sure you have the following software up and running:
+\begin{itemize}
+    \item A RaspberryPi B2 (RPI) with newest version of Raspbian.
+    \item An Active internet connection on the RPI.
+    \item An open SSH, see setup below.
+\end{itemize}
+
+\subsection{Headless setup procedure}
+
+\begin{itemize}
+    \item Step 1: Create an empty file. You can use Notepad on Windows or TextEdit to do so by creating a new file. Just name the file ssh. Save that empty file and dump it into boot partition (microSD).
+    \item Step 2: Create another file name \textbf{wpa\_supplicant.conf}. This time you need to write a few lines of text for this file. For this file, you need to use the \textbf{FULL VERSION} of wpa\_supplicant.conf. Meaning you must have the 3 lines of data namely country, \textbf{ctrl\_interface} and \textbf{update\_config}.
+\end{itemize}
+
+\begin{lstlisting}
+}
+country="Your country"
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="your_real_wifi_ssid"
+    scan_ssid=1
+    psk="your_real_password"
+    key_mgmt=WPA-PSK
+}
+\end{lstlisting}
+\newpage
+\subsection{Installation}
+\noindent To install Rover and its dependencies from your RPI shell prompt, use the following command:
+\begin{lstlisting}[language=bash]
+  $ wget -q https://git.io/fx0ko -O /tmp/rover && bash /tmp/rover
+\end{lstlisting}
+
+\subsection{Manual Installation}
+
+Update your system package list:
+\begin{lstlisting}[language=bash]
+  $ sudo apt-get -update -y
+\end{lstlisting}
+
+Upgrade all you installed packages to their latest version:
+\begin{lstlisting}[language=bash]
+  $ sudo apt-get dist-upgrade -y
+\end{lstlisting}
+
+To download and install newest version of Node.js, use the following command:
+\begin{lstlisting}[language=bash]
+  $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+\end{lstlisting}
+
+Now install it by running: 
+\begin{lstlisting}[language=bash]
+  $ sudo apt-get install nodejs -y
+\end{lstlisting}
+
+To compile and install native addons from npm you also need to install build tools: 
+\begin{lstlisting}[language=bash]
+  $ sudo apt-get install build-essential -y
+\end{lstlisting}
+
+To download the Rover code you need to install git: 
+\begin{lstlisting}[language=bash]
+  $ sudo apt-get install git -y
+\end{lstlisting}
+
+Clone 'Scriptor' using git: 
+\begin{lstlisting}[language=bash]
+  $ git clone https://github.com/RescueOnWheels/Scriptor.git
+\end{lstlisting}
+
+Clone 'Rover' using git: 
+\begin{lstlisting}[language=bash]
+  $ git clone https://github.com/RescueOnWheels/Rover.git --recursive
+\end{lstlisting}
+
+Open the 'Scriptor' folder and start using the Rover: 
+\begin{lstlisting}[language=bash]
+  $ cd Scriptor && ./start.sh all
+\end{lstlisting}
