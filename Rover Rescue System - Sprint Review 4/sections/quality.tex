@@ -1,0 +1,20 @@
+\section{Quality assurance}
+
+\begin{frame}{\secname}
+	\begin{itemize}
+		\item Use of GIT submodules;
+		\item Custom mocks for simulation usage;
+		\item Protected branches with following rules:
+			\begin{itemize}
+				\item Require pull request reviews before merging;
+				\item Require status checks to pass before merging
+				\begin{itemize}
+					\item Travis-CI used for tests and code style;
+					\item CodeClimate used for unbiased code quality;
+					\item Coveralls is used for code coverage.
+				\end{itemize}
+			\end{itemize}
+		\item Definition of Done;
+		\item Definition of Ready.
+	\end{itemize}
+\end{frame}
