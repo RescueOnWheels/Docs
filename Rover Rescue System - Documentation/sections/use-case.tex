@@ -1,0 +1,32 @@
+\section{Use Cases}
+	
+	\begin{table}[htb]
+		\centering
+		\caption{Connect to Rover}
+		\begin{tabularx}{\textwidth}{|l|X|}
+			\hline
+			Name             & Connect to rover                                                                                                                                                               \\ \hline
+			Brief            & The user connects to the rover and enters the token                                                                                                                            \\ \hline
+			Actors           & User, Rover and control device.                                                                                                                                                \\ \hline
+			Assumption       & The rover is installed and activated                                                                                                                                           \\ \hline
+			Description      & To use the rover the user must first connect to the rover.                                                                                                                     \\ \hline
+			Primary scenario & \begin{tabular}[c]{@{}l@{}}1. Connect all needed devices to the internet.\\ 2. Enter IP in the application on the control device.\\ 3. Enter Token on controller.\end{tabular} \\ \hline
+			Exception        &                                                                                                                                                                                \\ \hline
+			Result           & The user is connected to the rover and is able to operate it.                                                                                                                  \\ \hline
+		\end{tabularx}
+	\end{table}
+	\begin{table}[htb]
+		\centering
+		\caption{Drive the Rover}
+		\begin{tabularx}{\textwidth}{|l|X|}
+			\hline
+			Name             & Drive Rover                                                \\ \hline
+			Brief            & The user connects to the rover and enters the token.       \\ \hline
+			Actors           & User, Rover and control device.                            \\ \hline
+			Assumption       & The rover is installed, activated and connected.            \\ \hline
+			Description      & To use the rover the user must first connect to the rover. \\ \hline
+			Primary scenario & 1. Press the button corresponding to your movement.        \\ \hline
+			Exception        &                                                            \\ \hline
+			Result           & The rover moves in the chosen direction.                   \\ \hline
+		\end{tabularx}
+	\end{table}
